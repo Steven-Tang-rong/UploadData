@@ -3,20 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241C338625EA5AF0001756A7 /* sortednames.plist in Resources */ = {isa = PBXBuildFile; fileRef = 241C338525EA5AF0001756A7 /* sortednames.plist */; };
+		241C338925EA5B35001756A7 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C338825EA5B35001756A7 /* TitleView.swift */; };
+		241C338C25EA5C1D001756A7 /* TitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241C338B25EA5C1D001756A7 /* TitleView.xib */; };
 		24638CD125E52C940038D0FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24638CD025E52C940038D0FD /* AppDelegate.swift */; };
 		24638CD325E52C940038D0FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24638CD225E52C940038D0FD /* SceneDelegate.swift */; };
 		24638CD525E52C940038D0FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24638CD425E52C940038D0FD /* ViewController.swift */; };
 		24638CD825E52C940038D0FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24638CD625E52C940038D0FD /* Main.storyboard */; };
 		24638CDA25E52C970038D0FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24638CD925E52C970038D0FD /* Assets.xcassets */; };
 		24638CDD25E52C970038D0FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24638CDB25E52C970038D0FD /* LaunchScreen.storyboard */; };
+		24638CF825E5339D0038D0FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24638CF725E5339D0038D0FD /* GoogleService-Info.plist */; };
+		8626BEF95E7E4F378A5E8293 /* Pods_UploadData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D061401E859A2A04E2927A8B /* Pods_UploadData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		24638CCD25E52C940038D0FD /* UploadData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UploadData.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		241C338525EA5AF0001756A7 /* sortednames.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sortednames.plist; sourceTree = "<group>"; };
+		241C338825EA5B35001756A7 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		241C338B25EA5C1D001756A7 /* TitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleView.xib; sourceTree = "<group>"; };
+		24638CCD25E52C940038D0FD /* Firebase-UploadData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase-UploadData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24638CD025E52C940038D0FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24638CD225E52C940038D0FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		24638CD425E52C940038D0FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +32,10 @@
 		24638CD925E52C970038D0FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24638CDC25E52C970038D0FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24638CDE25E52C970038D0FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24638CF725E5339D0038D0FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3E2BB770E2C0A8F8FA402EDA /* Pods-UploadData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UploadData.debug.xcconfig"; path = "Target Support Files/Pods-UploadData/Pods-UploadData.debug.xcconfig"; sourceTree = "<group>"; };
+		BE7792FD3A992C0BE1740E9C /* Pods-UploadData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UploadData.release.xcconfig"; path = "Target Support Files/Pods-UploadData/Pods-UploadData.release.xcconfig"; sourceTree = "<group>"; };
+		D061401E859A2A04E2927A8B /* Pods_UploadData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UploadData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8626BEF95E7E4F378A5E8293 /* Pods_UploadData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,15 +53,19 @@
 		24638CC425E52C940038D0FD = {
 			isa = PBXGroup;
 			children = (
+				241C338B25EA5C1D001756A7 /* TitleView.xib */,
+				241C338825EA5B35001756A7 /* TitleView.swift */,
 				24638CCF25E52C940038D0FD /* UploadData */,
 				24638CCE25E52C940038D0FD /* Products */,
+				8C0E8BE48713FD9A8EED33BF /* Pods */,
+				5D8824EFF1BC5313184002A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		24638CCE25E52C940038D0FD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				24638CCD25E52C940038D0FD /* UploadData.app */,
+				24638CCD25E52C940038D0FD /* Firebase-UploadData.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,29 +79,50 @@
 				24638CD625E52C940038D0FD /* Main.storyboard */,
 				24638CD925E52C970038D0FD /* Assets.xcassets */,
 				24638CDB25E52C970038D0FD /* LaunchScreen.storyboard */,
+				24638CF725E5339D0038D0FD /* GoogleService-Info.plist */,
+				241C338525EA5AF0001756A7 /* sortednames.plist */,
 				24638CDE25E52C970038D0FD /* Info.plist */,
 			);
 			path = UploadData;
 			sourceTree = "<group>";
 		};
+		5D8824EFF1BC5313184002A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D061401E859A2A04E2927A8B /* Pods_UploadData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C0E8BE48713FD9A8EED33BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E2BB770E2C0A8F8FA402EDA /* Pods-UploadData.debug.xcconfig */,
+				BE7792FD3A992C0BE1740E9C /* Pods-UploadData.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		24638CCC25E52C940038D0FD /* UploadData */ = {
+		24638CCC25E52C940038D0FD /* Firebase-UploadData */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24638CE125E52C970038D0FD /* Build configuration list for PBXNativeTarget "UploadData" */;
+			buildConfigurationList = 24638CE125E52C970038D0FD /* Build configuration list for PBXNativeTarget "Firebase-UploadData" */;
 			buildPhases = (
+				348DA69DE74CA8FCB257C8D6 /* [CP] Check Pods Manifest.lock */,
 				24638CC925E52C940038D0FD /* Sources */,
 				24638CCA25E52C940038D0FD /* Frameworks */,
 				24638CCB25E52C940038D0FD /* Resources */,
+				5CCBF50A48293356E73ED6E5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = UploadData;
+			name = "Firebase-UploadData";
 			productName = UploadData;
-			productReference = 24638CCD25E52C940038D0FD /* UploadData.app */;
+			productReference = 24638CCD25E52C940038D0FD /* Firebase-UploadData.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +139,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 24638CC825E52C940038D0FD /* Build configuration list for PBXProject "UploadData" */;
+			buildConfigurationList = 24638CC825E52C940038D0FD /* Build configuration list for PBXProject "Firebase-UploadData" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,7 +152,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				24638CCC25E52C940038D0FD /* UploadData */,
+				24638CCC25E52C940038D0FD /* Firebase-UploadData */,
 			);
 		};
 /* End PBXProject section */
@@ -125,12 +163,57 @@
 			buildActionMask = 2147483647;
 			files = (
 				24638CDD25E52C970038D0FD /* LaunchScreen.storyboard in Resources */,
+				24638CF825E5339D0038D0FD /* GoogleService-Info.plist in Resources */,
+				241C338625EA5AF0001756A7 /* sortednames.plist in Resources */,
 				24638CDA25E52C970038D0FD /* Assets.xcassets in Resources */,
 				24638CD825E52C940038D0FD /* Main.storyboard in Resources */,
+				241C338C25EA5C1D001756A7 /* TitleView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		348DA69DE74CA8FCB257C8D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UploadData-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CCBF50A48293356E73ED6E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UploadData/Pods-UploadData-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UploadData/Pods-UploadData-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UploadData/Pods-UploadData-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		24638CC925E52C940038D0FD /* Sources */ = {
@@ -140,6 +223,7 @@
 				24638CD525E52C940038D0FD /* ViewController.swift in Sources */,
 				24638CD125E52C940038D0FD /* AppDelegate.swift in Sources */,
 				24638CD325E52C940038D0FD /* SceneDelegate.swift in Sources */,
+				241C338925EA5B35001756A7 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +367,7 @@
 		};
 		24638CE225E52C970038D0FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E2BB770E2C0A8F8FA402EDA /* Pods-UploadData.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +386,7 @@
 		};
 		24638CE325E52C970038D0FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE7792FD3A992C0BE1740E9C /* Pods-UploadData.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -320,7 +406,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		24638CC825E52C940038D0FD /* Build configuration list for PBXProject "UploadData" */ = {
+		24638CC825E52C940038D0FD /* Build configuration list for PBXProject "Firebase-UploadData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24638CDF25E52C970038D0FD /* Debug */,
@@ -329,7 +415,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24638CE125E52C970038D0FD /* Build configuration list for PBXNativeTarget "UploadData" */ = {
+		24638CE125E52C970038D0FD /* Build configuration list for PBXNativeTarget "Firebase-UploadData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24638CE225E52C970038D0FD /* Debug */,

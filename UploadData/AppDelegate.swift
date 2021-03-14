@@ -6,14 +6,73 @@
 //
 
 import UIKit
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    
+    let sortedNameFile = "sortednames.plist"
+    var authHandler: AuthStateDidChangeListenerHandle!
+    override init() {
+        super.init()
+        FirebaseConfiguration.shared.setLoggerLevel(FirebaseLoggerLevel.min)
+        FirebaseApp.configure()
+    }
+    
+    
+    
+    //上傳
+    func uploadDataToFirebase(userNameReference: DatabaseReference, plistName: String) {
+        if let fileURL = Bundle.main.url(forResource: "sortednames", withExtension: "plist") {
+            guard let sortedNames = NSDictionary(contentsOf: fileURL) as? [String: [String]] else {
+                print("解析失敗")
+                return
+            }
+            let uploadQueue = DispatchQueue(label: "uploadDataQueue")
+            uploadQueue.async {
+                for (key, value) in sortedNames {
+                    print("Key: \(key)")
+                    for name in value {
+                        userNameReference.child(key).childByAutoId().setValue(name)
+                    }
+                }
+            }
+        }
+    }
+    
+    func checkHasData() {
+        let userNameReference = Database.database().reference(withPath: "tesla/driver")
+        userNameReference.observeSingleEvent(of: .value) { (dataSnapshot: DataSnapshot) in
+            if dataSnapshot.hasChildren() {
+                print("有資料")
+            }else {
+                print("尚無資料")
+                self.uploadDataToFirebase(userNameReference: userNameReference, plistName: self.sortedNameFile)
+            }
+        }
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        authHandler = Auth.auth().addStateDidChangeListener({ (auth: Auth, user: User?) in
+            guard let user = user else {
+                print("沒有登入")
+                print("準備登入")
+                
+                Auth.auth().signInAnonymously { (authDataResult: AuthDataResult?, error: Error?) in
+                    guard let result = authDataResult, error == nil else {
+                        print("登入失敗")
+                        return
+                    }
+                    print("使用者ID： \(result.user.uid)")
+                    Auth.auth().removeStateDidChangeListener(self.authHandler) //以免佔用記憶體
+                    self.checkHasData()
+                }
+                return //guard let user
+            }
+            print("已登入。ID: \(user.uid)")
+            self.checkHasData()
+        }) //authHandler
         return true
     }
 
